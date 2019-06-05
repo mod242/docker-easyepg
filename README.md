@@ -1,4 +1,4 @@
-# [mod242/docker-easyepg](https://github.com/mod242/docker-easyepg)
+# [docker-easyepg](https://github.com/mod242/docker-easyepg)
 
 This Image is based on the Work of linuxserver's webgrabplus container (https://github.com/linuxserver/docker-webgrabplus)
 
