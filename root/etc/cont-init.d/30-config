@@ -1,0 +1,20 @@
+#!/usr/bin/with-contenv bash
+
+# install easyepg
+[[ ! -e /easyepg/epg.sh ]] && \
+	wget -O /tmp/easyepg.zip https://github.com/sunsettrack4/easyepg/archive/v$EEPG_VER.zip && \
+	unzip /tmp/easyepg.zip -d /tmp && \
+	mv /tmp/easyepg-$EEPG_VER/* /easyepg/ && \
+	chmod -R 777 /easyepg && \
+	rm -R /tmp/* && 
+
+
+
+# add cron file for running easyepg
+[[ ! -e /easyepg/ee-cron ]] && \
+	cp /defaults/ee-cron /easyepg/ee-cron
+crontab /easyepg/ee-cron
+
+# permissions
+chown -R abc:abc \
+	/easyepg
