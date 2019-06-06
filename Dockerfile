@@ -25,12 +25,9 @@ RUN cpanm install Time::Seconds
 RUN cpanm install DateTime
 RUN cpanm install DateTime::Format::DateParse
 RUN cpanm install utf8
+RUN cpanm XML::DOM
 RUN mkdir -p /easyepg
-#RUN wget -O /tmp/easyepg.zip https://github.com/sunsettrack4/easyepg/archive/v${EEPG_VER}.zip
-#RUN unzip /tmp/easyepg.zip -d /tmp
-#RUN mv /tmp/easyepg-${EEPG_VER}/* /easyepg/
-#RUN chmod -R 777 /easyepg
-#RUN rm -R /tmp/*
+
 
 # copy files
 COPY root/ /
