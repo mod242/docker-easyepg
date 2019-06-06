@@ -25,7 +25,7 @@ RUN cpanm install Time::Seconds
 RUN cpanm install DateTime
 RUN cpanm install DateTime::Format::DateParse
 RUN cpanm install utf8
-RUN cpanm XML::DOM
+RUN cpanm install XML::DOM
 RUN mkdir -p /easyepg
 
 
