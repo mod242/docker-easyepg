@@ -15,7 +15,7 @@ ENV HOME /easyepg
 ENV EEPG_VER="0.3.7"
 
 RUN apt-get update
-RUN apt-get install -y cron phantomjs dialog curl wget libxml2-utils perl perl-doc jq php git xml-twig-tools unzip liblocal-lib-perl cpanminus build-essential inetutils-ping
+RUN apt-get install -y cron phantomjs dialog curl wget libxml2-utils perl perl-doc jq php git xml-twig-tools unzip liblocal-lib-perl cpanminus build-essential inetutils-ping php-curl
 RUN cpan App:cpanminus
 RUN cpanm install JSON
 RUN cpanm install XML::Rules
