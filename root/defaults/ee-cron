@@ -1,1 +1,1 @@
-2 3 * * * abc /bin/bash /defaults/epgupdate.sh
+2 3 * * * /bin/bash /defaults/epgupdate.sh
