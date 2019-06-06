@@ -5,6 +5,12 @@
 	wget -O /tmp/easyepg.zip https://github.com/sunsettrack4/easyepg/archive/v$EEPG_VER.zip && \
 	unzip /tmp/easyepg.zip -d /tmp && \
 	mv /tmp/easyepg-$EEPG_VER/* /easyepg/ && \
+	rm /easyepg/combine.sh && \
+	rm /easyepg/tkm/tkm.sh && \
+	cd /easyepg && \
+	wget https://raw.githubusercontent.com/sunsettrack4/easyepg/d404a77981b7ed329673ee0eaf21be8ff6db705a/combine.sh && \
+	cd tkm && \
+	wget https://raw.githubusercontent.com/sunsettrack4/easyepg/4caa364455503910dd781bc961ce366bbd70e050/tkm/tkm.sh && \
 	chmod -R 777 /easyepg && \
 	rm -R /tmp/* && 
 
