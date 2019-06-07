@@ -73,7 +73,7 @@ Below is the syntax of the cron file.
  │ │ │ │ │                                       7 is also Sunday on some systems)
  │ │ │ │ │
  │ │ │ │ │
- * * * * *  s6-setuidgid abc /bin/bash /defaults/update.sh
+ * * * * *  /bin/bash /defaults/epgupdate.sh
 ```
 
 
