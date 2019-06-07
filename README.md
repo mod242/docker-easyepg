@@ -53,6 +53,9 @@ To configure easyEPG follow the [documentation](https://github.com/sunsettrack4/
 
 Note that to configure easyEPG you need to open the Terminal of the container by using "docker exec"
 
+Make sure to only call easyEPG in the terminal via the following command to make sure that no permission-issues arise:
+```/bin/bash /defaults/epgupdate.sh```
+
 **The configuration files are found where your config volume is mounted.**
 **Do not change the filename tag in the configuration file!**
 
