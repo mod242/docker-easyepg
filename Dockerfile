@@ -16,7 +16,7 @@ ENV EEPG_VER="0.3.7"
 
 RUN apt-get update
 RUN apt-get dist-upgrade -qy
-RUN apt-get install -qy build-essential unzip cron iproute2 phantomjs dialog curl wget git libxml2-utils perl perl-doc jq php php-curl xml-twig-tools liblocal-lib-perl inetutils-ping cpanminus 
+RUN apt-get install -qy build-essential nano unzip cron iproute2 phantomjs dialog curl wget git libxml2-utils perl perl-doc jq php php-curl xml-twig-tools liblocal-lib-perl inetutils-ping cpanminus 
 RUN cpan App:cpanminus
 RUN cpanm install JSON
 RUN cpanm install XML::Rules
