@@ -56,9 +56,6 @@ Note that to configure easyEPG you need to open the Terminal of the container by
 Make sure to only call easyEPG in the terminal via the following command to make sure that no permission-issues arise:
 ```/bin/bash /defaults/epgupdate.sh```
 
-**The configuration files are found where your config volume is mounted.**
-**Do not change the filename tag in the configuration file!**
-
 To adjust the scheduled cron job for grabbing, edit the ee-cron file found in the `/easyepg` folder. After you have edited the the ee-cron file, restart the container to apply the new schedule.
 Do not adjust the command!
 
@@ -87,7 +84,7 @@ Below is the syntax of the cron file.
 
 ## Updating Info
 
-To update the script simply go to the Terminal, start epg.sh and choose the Update option 
+The Container updates to the most recent version of EasyEPG when restartet
 
 ## Building locally
 
@@ -103,3 +100,4 @@ docker build \
 ## Versions
 
 * **05.06.19:** - Initial Release.
+* **09.06.19:** - Add Autoupdate and Cleanup
