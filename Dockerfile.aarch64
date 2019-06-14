@@ -1,5 +1,5 @@
 FROM lsiobase/ubuntu:arm64v8-xenial
-
+RUN [ “cross-build-start” ]
 # set version label
 ARG BUILD_DATE
 ARG VERSION
@@ -34,7 +34,7 @@ RUN apt-get -qy clean
 RUN apt-get -qy autoremove --purge
 RUN rm -rf /tmp/* /var/tmp/* /var/log/* /var/lib/apt/lists/* /var/lib/{apt,dpkg,cache,log}/ /var/cache/apt/archives /usr/share/doc/ /usr/share/man/ /usr/share/locale/
 
-
+RUN [ “cross-build-end” ]
 # copy files
 COPY root/ /
 
