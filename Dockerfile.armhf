@@ -1,5 +1,5 @@
 FROM lsiobase/ubuntu:arm32v7-xenial
-
+COPY qemu-arm-static /usr/bin/
 # set version label
 ARG BUILD_DATE
 ARG VERSION
