@@ -3,16 +3,16 @@ FROM lsiobase/ubuntu:xenial
 # set version label
 ARG BUILD_DATE
 ARG VERSION
-LABEL build_version="easyepg version:- 0.3.7"
+LABEL build_version="easyepg version:- 0.4.3"
 LABEL maintainer="mod242"
 
 # package versions
-ARG EEPG_VER="0.3.7"
+ARG EEPG_VER="0.4.3"
 
 # environment variables.
 ARG DEBIAN_FRONTEND="noninteractive"
 ENV HOME /easyepg
-ENV EEPG_VER="0.3.7"
+ENV EEPG_VER="0.3.3"
 
 RUN apt-get update
 RUN apt-get dist-upgrade -qy
@@ -27,6 +27,7 @@ RUN cpanm install Time::Seconds
 RUN cpanm install DateTime
 RUN cpanm install DateTime::Format::DateParse
 RUN cpanm install utf8
+RUN cpanm install DateTime::Format::Strptime
 RUN mkdir -p /easyepg
 RUN apt-get remove --purge -qy build-essential
 RUN apt-get -qy autoclean
